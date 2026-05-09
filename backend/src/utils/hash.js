@@ -8,4 +8,4 @@ async function comparePassword(password, hashedPassword) {
   return await bcrypt.compare(password, hashedPassword);
 }
 
-export {hashPassword,comparePassword};
+export { hashPassword, comparePassword };

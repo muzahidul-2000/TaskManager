@@ -26,9 +26,11 @@ function SignupPage() {
       const data = await res.json();
 
       if (!res.ok) {
-      setError(data.message); 
+        setError(data.message);
+        return;
       }
-      navigate("/login"); 
+
+      navigate("/login");
       console.log("Success:", data);
     } catch (err) {
       console.error(err);

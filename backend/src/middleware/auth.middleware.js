@@ -12,7 +12,7 @@ export function verifyToken(req, res, next) {
   
 
   try {
-    const decoded = jwt.verify(token, 'xyzabc1223343lndbshfh3');
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = decoded;
     next();
   } catch (err) {
